@@ -1,5 +1,20 @@
 
-# TINED
+# TINED: GNNs-to-MLPs by Teacher Injection and Dirichlet Energy Distillation (ICML 2025)
+
+## Code and data for our Heterogeneous Graph Neural Network method TINED: GNNs-to-MLPs by Teacher Injection and Dirichlet Energy Distillation (ICML 2025) (https://openreview.net/pdf?id=nshtqLv4r4)
+
+## Abstract
+Graph Neural Networks (GNNs) are pivotal in graph-based learning, particularly excelling in node classification. However, their scalability is hindered by the need for multi-hop data during inference, limiting their application in latency-sensitive scenarios. Recent efforts to distill GNNs into multi-layer perceptrons (MLPs) for faster inference often underutilize the layer-level insights of GNNs. In this paper, we present TINED, a novel approach that distills GNNs to MLPs on a layer-by-layer basis using Teacher Injection and Dirichlet Energy Distillation techniques. We focus on two key operations in GNN layers: feature transformation (FT) and graph propagation (GP). We recognize that FT is computationally equivalent to a fully-connected (FC) layer in MLPs. Thus, we propose directly transferring teacher parameters from an FT in a GNN to an FC layer in the student MLP, enhanced by fine-tuning. In TINED, the FC layers in an MLP replicate the sequence of FTs and GPs in the GNN. We also establish a theoretical bound for GP approximation. Furthermore, we note that FT and GP operations in GNN layers often exhibit opposing smoothing effects: GP is aggressive, while FT is conservative. Using Dirichlet energy, we develop a DE ratio to measure these effects and propose Dirichlet Energy Distillation to convey these characteristics from GNN layers to MLP layers. Extensive experiments show that TINED outperforms GNNs and leading distillation methods across various settings and seven datasets. Source code are available at https://github.com/scottjiao/TINED_ICML25/.
+
+Please cite our paper if you use the code or data.
+
+```@InProceedings{icml-zhou25,
+  title = 	 {TINED: GNNs-to-MLPs by Teacher Injection and Dirichlet Energy Distillation},
+  author =       {Ziang Zhou, Zhihao Ding, Jieming Shi, Li Qing, Shiqi Shen},
+  booktitle = 	 {International Conference on Machine Learning},
+  year = 	 {2025},
+}
+```
 
 
 ## Preparing datasets
